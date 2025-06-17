@@ -2,10 +2,33 @@
 
 <?php
 // <!-- Cấu hình -->
-
     const _HIENU = true;
 
-    echo _HIENU;
-    // Output: 1 // Kết quả thành công
+    // Khai báo database
+    const _HOST = 'localhost';
+    const _DB = 'manager_hienu';
+    const _USER = 'root';
+    const _PASS = '';
+    const _DRIVER = 'mysql';
+
+
+    // debug error
+    const _DEBUG = true;
+
+    // Thiết lập đường dẫn host
+    define('_HOST_URL', 'http://'. $_SERVER['HTTP_HOST'] . '/manager_course');
+    define('_HOST_URL_TEMPLATES', _HOST_URL . '/templates');
+
+    // Thiết lập path
+   define('_PATH_URL', __DIR__);
+   define('_PATH_URL_TEMPLATES', _PATH_URL . '/templates');
+
+    echo _HOST_URL .'<br>';
+    echo _HOST_URL_TEMPLATES .'<br>';
+    echo _PATH_URL .'<br>';
+    echo _PATH_URL_TEMPLATES .'<br>';
+    
+    
+
 
    
