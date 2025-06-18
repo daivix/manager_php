@@ -12,6 +12,35 @@
 
     require_once 'config.php';
 
-   
+    $module = _MODULES;
+    $action = _ACTION;
+
+    if(!empty($_GET['module'])) {
+        $module = $_GET['module'];
+    }
+
+    if(!empty($_GET['action'])) {
+        $action = $_GET['action'];
+    }
+
+    $path = 'modules/' . $module . '/' . $action . '.php';
+    // echo $path;
+
+    if(!empty($path)) {
+        // Kiểm tra xem có tồn tại hay không
+        if(file_exists($path)) {
+            // Nếu file tồn tại gọi dưới
+            echo 'Kết nối thành công';
+            require_once $path;
+        } else {
+            require_once './modules/errors/404.php';
+            // Nếu file không tồn tại
+            echo  'Lỗi xin vui lòng thử lại sau';
+        }
+    } else {
+        echo 'Truy cập lỗi';
+        require_once './modules/errors/500.php';
+
+    }
 
 ?>

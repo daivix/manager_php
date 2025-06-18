@@ -1,9 +1,8 @@
 
 <?php 
 
-
     if(!defined('_HIENU')) {
         die('Truy cập không hợp lệ');
     }
 
-    echo 'Truy cập vào trang Login-Auth/login.php';
+    echo 'TRANG STUDENTS';
