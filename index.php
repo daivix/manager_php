@@ -7,10 +7,12 @@
     // echo date('Y:m:d H:i:s');
     // Output: 2025:06:17 14:40:53
 
-    session_start(); //
+    session_start(); // Tạo mới hoặc tiếp tục phiên làm việc, dùng để 
+    // lưu trữ thông tin đăng nhập,...
     ob_start(); // Tránh xảy ra lỗi header, cookie
 
     require_once 'config.php';
+    require_once './includes/connect.php';
 
     $module = _MODULES;
     $action = _ACTION;
@@ -27,7 +29,7 @@
     // echo $path;
 
     if(!empty($path)) {
-        // Kiểm tra xem có tồn tại hay không
+        // Kiểm tra xem file có tồn tại hay không
         if(file_exists($path)) {
             // Nếu file tồn tại gọi dưới
             echo 'Kết nối thành công';
