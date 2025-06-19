@@ -2,6 +2,7 @@
 
 <?php
 
+// MAIN: INDEX
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     // Xuất thời gian ra màn hình
     // echo date('Y:m:d H:i:s');
@@ -13,6 +14,13 @@
 
     require_once 'config.php';
     require_once './includes/connect.php';
+    require_once './includes/database.php';
+    $rel = getAll("SELECT * FROM  course WHERE id = 2");
+    $rel = getOne("SELECT * FROM  course");
+    echo '<pre>';
+    print_r($rel);
+    echo '<pre>';
+    die();
 
     $module = _MODULES;
     $action = _ACTION;
