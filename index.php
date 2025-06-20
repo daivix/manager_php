@@ -15,11 +15,22 @@
     require_once 'config.php';
     require_once './includes/connect.php';
     require_once './includes/database.php';
-    $rel = getAll("SELECT * FROM  course WHERE id = 2");
-    $rel = getOne("SELECT * FROM  course");
-    echo '<pre>';
-    print_r($rel);
-    echo '<pre>';
+
+     $data = [
+                'name' => 'Hùng Ngọc',
+                'slug' => 'hung-ngoc',
+     ];
+
+
+     insert('course_category', $data);
+    die();
+
+
+    // $rel = getAll("SELECT * FROM  course WHERE id = 2");
+    // $rel = getOne("SELECT * FROM  course");
+    // echo '<pre>';
+    // print_r($rel);
+    // echo '<pre>';
     die();
 
     $module = _MODULES;

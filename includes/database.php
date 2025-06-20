@@ -34,3 +34,22 @@
 
             return $result;
     }
+
+    // Insert dữ liệu
+    function insert($table, $data) {
+        global $conn;
+
+        $keys = array_keys($data);
+        $cot = implode(',', $keys);
+        $place = ':'.implode(',:', $keys);
+       
+        $sql = "INSERT INTO $table ($cot) VALUES ($place)";
+           //:name ->placeholder
+
+        //   echo $sql;
+          $stm = $conn->prepare($sql); //SQL Injection
+
+          // Thực hiện câu lệnh
+          $rel = $stm -> execute($data);
+        //   var_dump($rel);
+    }
