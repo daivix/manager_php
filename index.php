@@ -16,22 +16,42 @@
     require_once './includes/connect.php';
     require_once './includes/database.php';
 
-     $data = [
-                'name' => 'Hùng Ngọc',
-                'slug' => 'hung-ngoc',
-     ];
+    //  $data = [
+    //             'name' => 'Ngân 2s',
+    //             'slug' => 'hung-ngoc',
+    //  ];
 
 
-     insert('course_category', $data);
-    die();
+    // // Update toàn bộ bảng course_category
+    // update('course_category', $data);
 
-
+    // Update 1 giá trị trong bảng theo điều kiện
+    // $condition = 'id = 1';
+    // update('course_category', $data, $condition);
+     
+    //  insert('course_category', $data);
+    //  die();
+     
     // $rel = getAll("SELECT * FROM  course WHERE id = 2");
     // $rel = getOne("SELECT * FROM  course");
     // echo '<pre>';
     // print_r($rel);
     // echo '<pre>';
-    die();
+    // die();
+
+
+    $data = [
+                'fullname' => 'Ngân 2s',
+                'email' => 'hung-ngoc@gmail.com',
+                'phone' => '092839274'
+    ];
+
+
+    $condition = 'id = 1';
+    insert('users', $data);
+    $rel = lastID();
+    echo $rel;
+
 
     $module = _MODULES;
     $action = _ACTION;
