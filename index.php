@@ -46,7 +46,7 @@
         // Kiểm tra xem file có tồn tại hay không
         if(file_exists($path)) {
             // Nếu file tồn tại gọi dưới
-            echo 'Kết nối thành công';
+            // echo 'Kết nối thành công';
             require_once $path;
         } else {
             require_once './modules/errors/404.php';

@@ -82,8 +82,6 @@
          
           <ul class="navbar-nav ms-auto">
            
-           
-            
             <!--begin::Fullscreen Toggle-->
             <li class="nav-item">
               <a class="nav-link" href="#" data-lte-toggle="fullscreen">
