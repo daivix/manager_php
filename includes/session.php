@@ -60,7 +60,7 @@
 
 
     // INCLUDES: SESSION
-    // Lấy session flash 
+    // Lấy session flash  
     // Chức năng: lấy dữ liệu ra sử dụng xong rồi xóa
     function getSessionFlash($key) {
         $key = $key .'Flash';
