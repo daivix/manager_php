@@ -15,23 +15,53 @@
     require_once 'config.php';
     require_once './includes/connect.php';
     require_once './includes/database.php';
+    require_once './includes/session.php';
+
+    // setSession('hung', 'Khóa học PHP');
+    // removeSession('hung');
+    // $a = getSession('hienu');
+    // echo $a;
+
+    // MAIN: INDEX
+    // setSessionFlash('hienu3', 'Khóa học PHP3');
+    
+    // echo '<pre>';
+    // print_r($_SESSION);
+    // echo '<pre>';
+
+    
+
+
+
+    // Main: INDEX
+    // Tạo dữ liệu
+    // setSession('hienu2Flash', 'Thêm thành công!');
+
+    // Lấy dữ liệu
+    $rel = getSessionFlash('hienu2');
+    echo $rel;
+    echo $rel;
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '<pre>';
+
+
 
     //  $data = [
     //             'name' => 'Ngân 2s',
     //             'slug' => 'hung-ngoc',
     //  ];
-
-
     // // Update toàn bộ bảng course_category
     // update('course_category', $data);
-
     // Update 1 giá trị trong bảng theo điều kiện
     // $condition = 'id = 1';
     // update('course_category', $data, $condition);
      
+
     //  insert('course_category', $data);
     //  die();
      
+
     // $rel = getAll("SELECT * FROM  course WHERE id = 2");
     // $rel = getOne("SELECT * FROM  course");
     // echo '<pre>';
@@ -40,17 +70,18 @@
     // die();
 
 
-    $data = [
-                'fullname' => 'Ngân 2s',
-                'email' => 'hung-ngoc@gmail.com',
-                'phone' => '092839274'
-    ];
+    // $data = [
+    //             'fullname' => 'Ngân 2s',
+    //             'email' => 'hung-ngoc@gmail.com',
+    //             'phone' => '092839274'
+    // ];
+    // $condition = 'id = 1';
+    // insert('users', $data);
+    // $rel = lastID();
+    // echo $rel;
 
 
-    $condition = 'id = 1';
-    insert('users', $data);
-    $rel = lastID();
-    echo $rel;
+
 
 
     $module = _MODULES;
