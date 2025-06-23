@@ -6,7 +6,12 @@
         die('Truy cập không hợp lệ');
     }
 
-    require_once './templates/layouts/header-auth.php';
+    $data = [
+      'title' => 'Đăng ký tài khoản'
+
+    ];
+    layout('header-auth', $data);
+
 ?>
 
     <section class="vh-100">
@@ -70,6 +75,6 @@
 
 
 
- <?php
-        require_once './templates/layouts/footer.php';
+<?php
+  layout('footer');
 ?>
