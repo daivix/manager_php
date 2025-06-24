@@ -13,16 +13,23 @@
     ob_start(); // Tránh xảy ra lỗi header, cookie
 
     require_once 'config.php';
+
     require_once './includes/connect.php';
     require_once './includes/database.php';
     require_once './includes/session.php';
+
+    // Email
+    require_once './includes/mailer/Exception.php';
+    require_once './includes/mailer/PHPMailer.php';
+    require_once './includes/mailer/SMTP.php';
+
     require_once './includes/functions.php';
-    require_once './templates/layouts/index.php';
 
    
 
-
-
+    $rel = sendMail('hienu.cskh@gmail.com', 'test mail', 'Nội dung email đang test');
+    var_dump($rel);
+    
 
    
 

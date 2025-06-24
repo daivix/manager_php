@@ -11,6 +11,7 @@
 
     ];
     layout('header-auth', $data);
+
 ?>
 
     <section class="vh-100">
